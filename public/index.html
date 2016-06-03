@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="CodeBoss">
+  <head>
+    <meta charset="utf-8">
+    <title>codeboss | Cursos em video-aulas de desenvolvimento web</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/app.min.css">
+
+    <base href="/">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="libs/typicons.font/src/font/typicons.min.css" />
+    <!-- endbower -->
+  </head>
+  <body>
+    <div class="container-fluid container-header">
+      <div class="container">
+        <div class="row">
+
+          <!-- Logo -->
+          <div class="col-xs-4">
+            <a ui-sref="home">
+              <h1 class="logo">
+                <img src="assets/img/logo32.png" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+                <span class="hidden-xs">codeboss.com.br</span>
+              </h1>
+            </a>
+          </div>
+
+          <!-- Toolbar buttons -->
+          <div class="col-xs-8">
+            <div class="toolbar pull-right">
+              <a href="" class="cb-link-bordered m-r-20">Criar conta</a>
+              <a href="" class="btn btn-default">Entrar <i class="typcn typcn-user-outline"></i></a>
+            </div><!-- .toolbar -->
+          </div>
+
+        </div>
+      </div>
+    </div><!-- .container-header -->
+
+    <div class="container-fluid container-main">
+      <div class="container" ui-view></div>
+    </div><!-- .container-main -->
+
+    <div class="container-fluid container-footer">
+      <div class="container">
+        <p>&copy; Codeboss. Made with <i class="typcn typcn-heart-outline text-danger"></i> love.</p>
+      </div>
+    </div><!-- .container-footer -->
+  </body>
+
+  <!-- bower:js -->
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- endbower -->
+
+  <script src="build/app.min.js"></script>
+</html>

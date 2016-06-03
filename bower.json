@@ -1,0 +1,29 @@
+{
+  "name": "codeboss",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Diego Schell Fernandes <diego.schell.f@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "typicons.font": "typicons#^2.0.7",
+    "angular-ui-router": "^0.3.0"
+  },
+  "overrides": {
+    "typicons.font": {
+      "main": [
+        "src/font/typicons.min.css"
+      ]
+    }
+  }
+}
