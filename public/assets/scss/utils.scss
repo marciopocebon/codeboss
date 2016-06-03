@@ -1,6 +1,7 @@
 /**
  * Background colors
  */
+.bg-white   { background-color: #FFFFFF; }
 .bg-default { background-color: $default-color; }
 .bg-primary { background-color: $primary-color; }
 .bg-info    { background-color: $info-color; }
@@ -11,6 +12,7 @@
 /**
  * Colors
  */
+.text-white   { color: #FFFFFF; }
 .text-default { color: $default-color; }
 .text-primary { color: $primary-color; }
 .text-info    { color: $info-color; }
@@ -21,6 +23,8 @@
 /**
  * Margin
  */
+.no-margin { margin: 0; }
+
 .m-t-5   { margin-top: 5px; }
 .m-t-10  { margin-top: 10px; }
 .m-t-15  { margin-top: 15px; }
@@ -57,6 +61,8 @@
 /**
  * Padding
  */
+.no-padding { padding: 0; }
+
 .p-t-5   { padding-top: 5px; }
 .p-t-10  { padding-top: 10px; }
 .p-t-15  { padding-top: 15px; }
@@ -103,9 +109,63 @@
 .large { font-size: 16px; }
 
 /**
+ * Border options
+ */
+.b-t-1 { border-top: 5px solid #eee; }
+.b-t-2 { border-top: 5px solid #eee; }
+.b-t-5 { border-top: 5px solid #eee; }
+
+.b-l-1 { border-left: 5px solid #eee; }
+.b-l-2 { border-left: 5px solid #eee; }
+.b-l-5 { border-left: 5px solid #eee; }
+
+.b-r-1 { border-right: 5px solid #eee; }
+.b-r-2 { border-right: 5px solid #eee; }
+.b-r-5 { border-right: 5px solid #eee; }
+
+.b-b-1 { border-bottom: 5px solid #eee; }
+.b-b-2 { border-bottom: 5px solid #eee; }
+.b-b-5 { border-bottom: 5px solid #eee; }
+
+.b-default { border-color: $default-color; }
+.b-primary { border-color: $primary-color; }
+.b-info    { border-color: $info-color; }
+.b-warning { border-color: $warning-color; }
+.b-danger  { border-color: $danger-color; }
+.b-success { border-color: $success-color; }
+
+.b-default-light { border-color: lighten($default-color, 10%); }
+.b-primary-light { border-color: lighten($primary-color, 10%); }
+.b-info-light    { border-color: lighten($info-color, 10%); }
+.b-warning-light { border-color: lighten($warning-color, 10%); }
+.b-danger-light  { border-color: lighten($danger-color, 10%); }
+.b-success-light { border-color: lighten($success-color, 10%); }
+
+.b-default-lighter { border-color: lighten($default-color, 20%); }
+.b-primary-lighter { border-color: lighten($primary-color, 20%); }
+.b-info-lighter    { border-color: lighten($info-color, 20%); }
+.b-warning-lighter { border-color: lighten($warning-color, 20%); }
+.b-danger-lighter  { border-color: lighten($danger-color, 20%); }
+.b-success-lighter { border-color: lighten($success-color, 20%); }
+
+.b-default-dark { border-color: darken($default-color, 10%); }
+.b-primary-dark { border-color: darken($primary-color, 10%); }
+.b-info-dark    { border-color: darken($info-color, 10%); }
+.b-warning-dark { border-color: darken($warning-color, 10%); }
+.b-danger-dark  { border-color: darken($danger-color, 10%); }
+.b-success-dark { border-color: darken($success-color, 10%); }
+
+.b-default-darker { border-color: darken($default-color, 20%); }
+.b-primary-darker { border-color: darken($primary-color, 20%); }
+.b-info-darker    { border-color: darken($info-color, 20%); }
+.b-warning-darker { border-color: darken($warning-color, 20%); }
+.b-danger-darker  { border-color: darken($danger-color, 20%); }
+.b-success-darker { border-color: darken($success-color, 20%); }
+
+/**
  * Link
  */
-a {
+a.link {
   font-weight: 600;
   color: #000;
   transition: 0.2s;

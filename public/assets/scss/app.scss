@@ -10,14 +10,14 @@
  */
 .container-header {
   margin-top: 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
 
   h1.logo {
     display: inline;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
-    line-height: 41px;
+    font-weight: 300;
+    color: #000;
 
     img {
       padding-right: 5px;
@@ -30,28 +30,83 @@
 }
 
 /**
+ * Sidebar
+ */
+.sidebar {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  background: #FFF;
+  border: 1px solid #CCC;
+  margin-top: -100px;
+
+  a {
+    font-size: 20px;
+    padding: 4px 8px;
+    margin: 5px;
+    display: block;
+    background: #eee;
+  }
+}
+
+/**
  * Main
  */
 .container-main {
-  padding: 50px 0;
-  background: url(../assets/img/bg-call.jpg) no-repeat center bottom;
-  background-size: 100%;
-  min-height: 600px;
 
   .main-call {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: url(../assets/img/bg-call.jpg) no-repeat center bottom;
+    min-height: 450px;
     text-align: center;
 
     h2 {
       font-size: 48px;
       font-weight: 600;
+      color: #000;
     }
 
     p {
       font-size: 20px;
       margin: 20px 0 50px;
     }
-
   }
+
+  .categories {
+    text-align: left;
+
+    .category {
+      display: block;
+      padding: 15px;
+      margin-top: 10px;
+      transition: 0.2s;
+
+      i {
+        font-size: 28px;
+      }
+
+      h3 {
+        color: #FFF;
+        margin-top: 20px;
+      }
+
+      p {
+        margin: 5px 0 0;
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.8;
+      }
+
+      &:hover {
+        color: #FFF;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px ) {
+  .main-call .categories .category:hover { margin-top: 0; }
 }
 
 /**
@@ -59,7 +114,7 @@
  */
 .container-footer {
   margin: 40px auto 0;
-  padding-top: 20px;
+  padding: 20px 0;
   border-top: 1px solid #eee;
 
   p {

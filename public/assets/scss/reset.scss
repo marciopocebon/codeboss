@@ -54,10 +54,6 @@ table {
   border-spacing: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #000;
-}
-
 img {
   max-width: 100%;
 }
@@ -66,4 +62,9 @@ p {
   line-height: 1.5em;
 }
 
+a {
+  cursor: pointer;
+}
+
+:hover { text-decoration: none !important; }
 :focus { outline: none !important; text-decoration: none !important; }
