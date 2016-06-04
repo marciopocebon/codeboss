@@ -133,6 +133,10 @@
  * Border options
  */
 .noborder { border: 0; }
+.noborder-t { border-top: 0; }
+.noborder-l { border-left: 0; }
+.noborder-b { border-bottom: 0; }
+.noborder-r { border-right: 0; }
 
 .b-1 { border: 1px solid #eee; }
 .b-2 { border: 2px solid #eee; }
