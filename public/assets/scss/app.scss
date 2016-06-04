@@ -221,6 +221,10 @@
   .main-call .categories .category:hover { margin-top: 0; }
 }
 
+@media (max-width: 992px ) {
+  .container-posts .post-box { margin-bottom: 15px }
+}
+
 /**
  * Footer
  */
