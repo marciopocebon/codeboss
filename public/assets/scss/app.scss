@@ -24,8 +24,33 @@
     }
   }
 
+  nav {
+    display: inline-block;
+
+    ul li {
+      display: inline-block;
+      line-height: 32px;
+      margin-left: 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
   .toolbar {
     line-height: 32px;
+    float: right;
+
+    @media (max-width: 768px) {
+      & {
+        float: none;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #EEE;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -39,6 +64,7 @@
   background: #FFF;
   border: 1px solid #eee;
   margin-top: -100px;
+  z-index: 999;
 
   a {
     font-size: 20px;
@@ -77,8 +103,10 @@
       transition: 0.2s;
       padding: 18px 40px;
 
-      &:hover {
-        margin-top: 0;
+      @media (min-width: 768px) {
+        &:hover {
+          margin-top: 0;
+        }
       }
     }
   }

@@ -36,18 +36,27 @@
         <div class="row">
 
           <!-- Logo -->
-          <div class="col-xs-4">
+          <div class="col-sm-8">
             <a ui-sref="home">
               <h1 class="logo">
                 <img src="assets/img/logo64.png" width="41" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
                 <span class="hidden-xs">codeboss.com.br</span>
-              </h1>
+              </h1><!-- .logo -->
             </a>
+
+            <!-- Menu -->
+            <nav role="navigation" class="m-l-15 p-l-15 b-l-1">
+              <ul>
+                <li><a class="link" href="">Sobre nós</a></li>
+                <li><a class="link" href="">Preço</a></li>
+                <li><a class="link" href="">Cursos</a></li>
+              </ul>
+            </nav>
           </div>
 
           <!-- Toolbar buttons -->
-          <div class="col-xs-8">
-            <div class="toolbar pull-right">
+          <div class="col-sm-4">
+            <div class="toolbar">
               <a href="" class="link cb-link-bordered m-r-20">Criar conta</a>
               <a href="" class="btn btn-default">Entrar <i class="typcn typcn-user-outline"></i></a>
             </div><!-- .toolbar -->
@@ -80,6 +89,7 @@
   <!-- bower:js -->
   <script src="libs/angular/angular.js"></script>
   <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="libs/jquery/dist/jquery.js"></script>
   <!-- endbower -->
 
   <script src="build/app.min.js"></script>
