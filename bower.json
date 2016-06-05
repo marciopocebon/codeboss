@@ -16,14 +16,14 @@
   ],
   "dependencies": {
     "angular": "^1.5.6",
-    "typicons.font": "typicons#^2.0.7",
     "angular-ui-router": "^0.3.0",
-    "jquery": "^2.2.4"
+    "jquery": "^2.2.4",
+    "font-awesome": "^4.6.3"
   },
   "overrides": {
-    "typicons.font": {
+    "font-awesome": {
       "main": [
-        "src/font/typicons.min.css"
+        "css/font-awesome.min.css"
       ]
     }
   }

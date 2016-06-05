@@ -5,10 +5,9 @@
   background-color: #EEE;
   display: inline-block;
   padding: 4px 15px;
-  font-weight: 300;
+  font-size: 13px;
 
   i {
-    font-size: 16px;
     margin-left: 5px;
 
     &.left-icon {
@@ -28,15 +27,12 @@
 
   &.btn-sm {
     padding: 3px 10px;
+    font-size: 11px;
   }
 
   &.btn-lg {
-    font-size: 20px;
-    padding: 8px 20px;
-
-    i {
-      font-size: 20px;
-    }
+    padding: 14px 20px;
+    font-size: 15px;
   }
 
   &.btn-white {
