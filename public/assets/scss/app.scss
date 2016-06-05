@@ -147,6 +147,16 @@
     .post-box {
       position: relative;
 
+      &:focus header,
+        &:hover header {
+          padding: 15px 15px 10px;
+
+          a {
+            text-shadow: 0 0 1px #111;
+            color: #FFF;
+          }
+        }
+
       header {
         position: absolute;
         width: calc(100% - 30px);
@@ -156,36 +166,16 @@
         transform: translateY(-100%);
         background: rgba(39, 38, 38, 0.7);
         background: linear-gradient(rgba(#111, .0), #000);
-        transition: all linear 200ms;
-
-        &:focus,
-        &:hover {
-          padding: 15px 15px 10px;
-
-          a {
-            text-shadow: 0 0 1px #111;
-            color: #FFF;
-          }
-        }
+        transition: 0.2s;
 
         .title {
           position: relative;
           min-height: 20px;
-          font-size: 18px;
+          font-size: 15px;
           text-align: center;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
-
-          a {
-            transition: all linear 200ms;
-
-            &:focus,
-            &:hover {
-              text-shadow: 0 0 1px #111;
-              color: #FFF;
-            }
-          }
         }
       }
 
@@ -202,13 +192,9 @@
           left: 50%;
           max-width: none;
           width: 100%;
-          height: auto;
+          height: 100%;
           transform: translate(-50%, -50%);
         }
-      }
-
-      footer {
-        background-color: #FFF;
       }
     }
   }
