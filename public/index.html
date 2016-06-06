@@ -19,17 +19,17 @@
     <!-- endbower -->
   </head>
   <body>
-    <!-- Login -->
-    <div id="signin-overlay">
-      <div class="login-box p-20">
-        <a href="#" class="close-login-box" title="Fechar"><i class="fa fa-close"></i></a>
-        <span class="title">Entre com redes sociais</span>
-        <div class="social-login-container">
-          <a href="#" class="btn btn-block btn-info btn-lg btn-alt btn-facebook">
+    <div class="signin">
+      <div class="login-box">
+        <a href="#" class="btn-close" title="Fechar"><i class="fa fa-close"></i></a>
+
+        <span class="box-title">Entre com redes sociais</span>
+        <div class="box-social">
+          <a href="#" class="btn btn-block btn-lg btn-alt btn-facebook">
             <i class="left-icon fa fa-facebook"></i>
             <span>Facebook</span>
           </a>
-          <a href="#" class="btn btn-block btn-warning btn-lg btn-alt m-t-10 btn-google">
+          <a href="#" class="btn btn-block btn-lg btn-alt m-t-10 btn-google">
             <i class="left-icon fa fa-google"></i>
             <span>Google</span>
           </a>
@@ -37,8 +37,9 @@
             <i class="left-icon fa fa-github"></i>
             <span>Github</span>
           </a>
-        </div>
-        <span class="ou-separator"><span>ou com e-mail</span></span>
+        </div><!-- .box-social -->
+
+        <span class="box-title-separator"><span>ou com e-mail</span></span>
         <form action="">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Informe seu e-mail">
@@ -48,50 +49,46 @@
             <span>Entrar</span>
           </button>
         </form>
+
       </div><!-- .login-box -->
-    </div><!-- #signin-overlay -->
+    </div><!-- .signin -->
 
     <aside class="sidebar hidden-xs">
-      <a href="#">
+      <a href="http://www.facebook.com/codeboss.com.br">
         <i class="fa fa-facebook"></i>
       </a>
-      <a href="#">
+      <a href="http://www.twitter.com/codeboss.com.br">
         <i class="fa fa-twitter"></i>
       </a>
-      <a href="#">
+      <a href="https://github.com/codebossbr">
         <i class="fa fa-github-alt"></i>
       </a>
-    </aside>
+    </aside><!-- .sidebar -->
 
     <header class="container-fluid container-header">
       <div class="container">
         <div class="row">
 
-          <!-- Logo -->
           <div class="col-sm-8">
             <a ui-sref="home">
               <h1 class="logo">
-                <img src="assets/img/logo64.png" width="41" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+                <img src="assets/img/logo64.png" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
                 <span class="hidden-xs">codeboss.com.br</span>
               </h1><!-- .logo -->
             </a>
 
-            <!-- Menu -->
-            <nav role="navigation" class="m-l-15 p-l-15 b-l-1">
+            <nav role="navigation">
               <ul>
-                <li><a class="link" href="#">Sobre nós</a></li>
-                <li><a class="link" href="#">Preço</a></li>
-                <li><a class="link" href="#">Cursos</a></li>
-                <li><a class="link" href="#">Blog</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="cursos">Cursos</a></li>
+                <li><a href="#">Blog</a></li>
               </ul>
             </nav>
           </div>
 
-          <!-- Toolbar buttons -->
           <div class="col-sm-4">
             <div class="toolbar">
-              <!-- <a href="#" class="link cb-link-bordered m-r-20">Criar conta</a> -->
-              <a href="#" id="signin-link" class="btn btn-default">Entrar <i class="fa fa-user"></i></a>
+              <a href="#" class="btn btn-default btn-signin">Entrar <i class="fa fa-user"></i></a>
             </div><!-- .toolbar -->
           </div>
 
@@ -106,14 +103,17 @@
     <footer class="container-fluid container-footer">
       <div class="container">
         <div class="row">
+
           <div class="col-xs-9">
             <p>&copy; Codeboss. Criado com <i class="fa fa-heart-o text-danger"></i> amor.</p>
           </div>
+
           <div class="col-xs-3">
             <div class="pull-right">
-              <img src="assets/img/logo32.png" width="32" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+              <img src="assets/img/logo32.png" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
             </div>
           </div>
+
         </div>
       </div>
     </footer><!-- .container-footer -->

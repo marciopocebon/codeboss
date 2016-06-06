@@ -9,9 +9,9 @@
 @import 'pages/login';
 
 /**
- * Sign in
+ * Signin
  */
-#signin-overlay {
+.signin {
   position: fixed;
   top: 0;
   left: 0;
@@ -23,28 +23,29 @@
   z-index: -1;
   transition: all 250ms ease-in;
 
-  &.show {
-    visibility: visible;
-    opacity: 1;
-    z-index: 100;
-
-    .login-box {
-      top: 50%;;
-      transform: translate(-50%, -50%) translateZ(0);
-    }
-  }
-
   .login-box {
     position: absolute;
     top: 0;
     left: 50%;
     width: 320px;
+    padding: 20px;
     background: #FFF;
     min-height: 300px;
     transform: translate(-50%, -100%) translateZ(0);
     transition: all 250ms ease-in;
 
-    .title {
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 7px;
+      right: 9px;
+      font-size: 14px;
+    }
+
+    .box-title {
       display: block;
       font-weight: 500;
       font-size: 20px;
@@ -52,97 +53,67 @@
       margin-bottom: 15px;
       color: #000;
     }
-  }
 
-  .close-login-box {
-    position: absolute;
-    top: 7px;
-    right: 9px;
-    font-size: 14px;
-  }
+    .box-social {
 
-  .btn-facebook {
-    background-color: #3B5998;
+      .btn-facebook {
+        background-color: #3B5998;
+        color: #FFF;
 
-    &:hover,
-    &:focus {
-      background-color: darken(#3B5998, 10%);
-    }
-  }
-
-  .btn-google {
-    background-color: #DC4E41;
-
-    &:hover,
-    &:focus {
-      background-color: darken(#DC4E41, 10%);
-    }
-  }
-
-  .left-icon {
-    margin-right: 15px;
-  }
-
-  .ou-separator {
-    position: relative;
-    display: block;
-    text-align: center;
-    margin: 15px 0 !important;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #EEE;
-      z-index: 2;
-    }
-
-    span {
-      position: relative;
-      display: inline-block;
-      padding: 0 10px;
-      background-color: #FFF;
-      z-index: 4;
-      font-size: 13px;
-      color: #999;
-    }
-  }
-}
-
-/**
- * Header
- */
-.container-header {
-  margin-top: 20px;
-  padding-bottom: 20px;
-
-  h1.logo {
-    display: inline;
-    font-size: 20px;
-    margin: 0;
-    font-weight: 300;
-    color: #000;
-
-    img {
-      padding-right: 5px;
-    }
-  }
-
-  .toolbar {
-    line-height: 32px;
-    float: right;
-
-    @media (max-width: 768px) {
-      & {
-        float: none;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #EEE;
-        text-align: center;
+        &:hover,
+        &:focus {
+          background-color: darken(#3B5998, 10%);
+        }
       }
+
+      .btn-google {
+        background-color: #DC4E41;
+        color: #FFF;
+
+        &:hover,
+        &:focus {
+          background-color: darken(#DC4E41, 10%);
+        }
+      }
+    }
+
+    .box-title-separator {
+      position: relative;
+      display: block;
+      text-align: center;
+      margin: 15px 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #EEE;
+        z-index: 5;
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+        background-color: #FFF;
+        z-index: 10;
+        font-size: 13px;
+        color: #999;
+      }
+    }
+  }
+
+  &.signin--show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+
+    .login-box {
+      top: 50%;
+      transform: translate(-50%, -50%) translateZ(0);
     }
   }
 }
@@ -180,6 +151,46 @@
 
       i.fa-github-alt {
         color: #333;
+      }
+    }
+  }
+}
+
+/**
+ * Header
+ */
+.container-header {
+  margin-top: 20px;
+  padding-bottom: 20px;
+
+  h1.logo {
+    display: inline;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 300;
+    color: #000;
+
+    img {
+      padding-right: 5px;
+      width: 41px;
+    }
+  }
+
+  .toolbar {
+    line-height: 32px;
+    float: right;
+
+    @media (max-width: 768px) {
+      & {
+        float: none;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #EEE;
+        text-align: center;
+
+        a.btn-signin {
+          display: block;
+        }
       }
     }
   }

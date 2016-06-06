@@ -1,11 +1,12 @@
-<div class="login-call">
+<div class="box-login">
   <div class="container">
-    <div class="row m-t-50 text-center">
-      <div class="col-md-6 col-md-push-3">
-        <h1 class="text-black font-semibold">Falta pouco para você começar</h1>
-        <p class="m-t-15">Preencha seus dados e escolha um tipo de assinatura.</p>
-        <form action="" class="m-t-50">
-          <h2 class="text-left f-16 text-black m-b-10">Dados pessoais</h2>
+    <div class="row">
+      <div class="login-form col-md-6 col-md-push-3">
+        <h1>Falta pouco para você começar</h1>
+        <p>Preencha seus dados e escolha um tipo de assinatura.</p>
+
+        <form action="">
+          <h2>Dados pessoais</h2>
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Nome completo">
           </div>
@@ -15,53 +16,51 @@
           <div class="form-group">
             <input type="password" class="form-control" placeholder="Telefone para contato">
           </div>
-          <h2 class="text-left f-16 text-black m-t-20 m-b-10">Assinatura</h2>
-          <div class="row">
+          <h2 class="m-t-20">Assinatura</h2>
+          <div class="planos row">
             <div class="col-md-4">
-              <div class="b-2 b-primary p-15">
-                <label class="f-14"><input type="radio"> Sem assinatura</label>
-                <p class="m-t-10 f-12">
-                  Os cursos são comprados separadamente
-                </p>
+              <div class="box-plano">
+                <label><input type="radio"> Sem assinatura</label>
+                <p class="m-t-10 f-12">Os cursos são comprados separadamente</p>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="b-2 b-primary p-15">
-                <label class="f-14"><input type="radio"> 6 meses</label>
-                <h3 class="m-t-15 m-b-20 font-semibold text-primary">R$500,00</h3>
-                <div class="m-t-10 b-t-1 font-semibold text-primary f-14">
-                  <p class="m-t-10 p-b-10 b-b-1">
-                    <i class="fa fa-check m-r-5"></i> 20 cursos
-                  </p>
-                  <p class="m-t-10 p-b-10 b-b-1">
-                    <i class="fa fa-check m-r-5"></i> 243 exercícios
-                  </p>
-                  <p class="m-t-10 text-gray">
-                    <i class="fa fa-remove m-r-5"></i> 15% desconto
-                  </p>
-                </div>
+              <div class="box-plano">
+                <label><input type="radio"> 6 meses</label>
+                <h3>R$500,00</h3>
+                <ul class="vantagens">
+                  <li>
+                    <i class="fa fa-check"></i> 20 cursos
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> 243 exercícios
+                  </li>
+                  <li class="disabled">
+                    <i class="fa fa-remove"></i> 15% desconto
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-md-4">
-              <div class="b-2 b-primary p-15">
-                <label class="f-14"><input type="radio"> 1 ano</label>
-                <h3 class="m-t-15 m-b-20 font-semibold text-primary">R$850,00</h3>
-                <div class="m-t-10 b-t-1 font-semibold text-primary f-14">
-                  <p class="m-t-10 p-b-10 b-b-1">
-                    <i class="fa fa-check m-r-5"></i> 20 cursos
-                  </p>
-                  <p class="m-t-10 p-b-10 b-b-1">
-                    <i class="fa fa-check m-r-5"></i> 243 exercícios
-                  </p>
-                  <p class="m-t-10">
-                    <i class="fa fa-check m-r-5"></i> 15% desconto
-                  </p>
-                </div>
+              <div class="box-plano">
+                <label><input type="radio"> 1 ano</label>
+                <h3>R$850,00</h3>
+                <ul class="vantagens">
+                  <li>
+                    <i class="fa fa-check"></i> 20 cursos
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> 243 exercícios
+                  </li>
+                  <li>
+                    <i class="fa fa-check"></i> 15% desconto
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <a href="pagamento" class="btn btn-primary btn-block btn-lg btn-alt m-t-20">
+          <a href="pagamento" class="btn btn-primary btn-block btn-lg btn-alt">
             Prosseguir
             <i class="fa fa-caret-right"></i>
           </a>

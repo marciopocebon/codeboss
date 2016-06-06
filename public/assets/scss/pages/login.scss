@@ -1,5 +1,94 @@
-.login-call {
+.box-login {
   background: url(../assets/img/bg-call.jpg) no-repeat center bottom;
   padding-bottom: 200px;
   border-bottom: 1px solid #EEE;
+
+  .login-form {
+    margin-top: 50px;
+    text-align: center;
+
+    h1 {
+      color: #000;
+      font-weight: 600;
+    }
+
+    & > p {
+      margin-top: 15px;
+    }
+
+    form {
+      margin-top: 50px;
+
+      h2 {
+        text-align: left;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        margin-top: 20px;
+      }
+
+      .planos {
+        .box-plano {
+          border-width: 2px;
+          border-style: solid;
+          @extend .b-primary;
+          padding: 15px;
+
+          label {
+            font-size: 14px;
+          }
+
+          h3 {
+            margin: 15px 0 20px;
+            font-weight: 600;
+            @extend .text-primary;
+          }
+
+          .vantagens {
+            font-weight: 600;
+            @extend .text-primary;
+            font-size: 14px;
+
+            li {
+              padding-top: 10px;
+              margin-top: 10px;
+              border-top: 1px solid #EEE;
+
+              i {
+                margin-right: 5px;
+              }
+
+              &.disabled {
+                @extend .text-gray;
+              }
+            }
+          }
+        }
+      }
+
+      .payment-options {
+         border: 1px solid #EEE;
+         padding: 15px;
+         border-bottom: 0;
+
+         label {
+          font-size: 14px;
+         }
+      }
+
+      .payment-form {
+        border: 1px solid #EEE;
+        padding: 15px;
+        text-align: left;
+        @extend .bg-gray;
+
+        .btn {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }

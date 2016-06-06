@@ -3,7 +3,7 @@
  */
 .container-main {
 
-  .main-call {
+  .box-main {
     padding-top: 50px;
     padding-bottom: 50px;
     background: url(../assets/img/bg-call.jpg) no-repeat center bottom;
@@ -34,7 +34,18 @@
     }
   }
 
-  .testimonials {
+  .box-description {
+    padding: 50px 0;
+    @extend .bg-info;
+
+    p {
+      text-align: center;
+      color: #FFF;
+      font-size: 18px;
+    }
+  }
+
+  .box-testimonials {
     padding-top: 50px;
     padding-bottom: 50px;
     background: url(../assets/img/bg-testimonials.jpg) no-repeat center top;
@@ -47,27 +58,59 @@
       color: #000;
     }
 
-    .comment {
-      color: #999;
+    .row {
+      margin-top: 50px;
 
-      h2 {
-        color: #000;
-      }
+      article {
+        margin-bottom: 20px;
 
-      img {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
+        .comment {
+          color: #999;
+          background: #FFF;
+          border-width: 3px;
+          border-style: solid;
+          @extend .b-primary;
+          padding: 50px 20px;
+
+          h2 {
+            color: #000;
+            margin-top: 15px;
+          }
+
+          img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+          }
+
+          .message {
+            margin-top: 20px;
+            color: #000;
+            font-weight: 500;
+          }
+
+          .course-about {
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
 
-  .container-posts {
+  .box-blog {
+
+    h1 {
+      text-align: center;
+      color: #000;
+      font-weight: 6000;
+      margin-top: 40px;
+    }
+
     .row {
       margin: 40px 0;
     }
 
-    .post-box {
+    article {
       position: relative;
 
       @media (max-width: 992px ) {
@@ -95,7 +138,7 @@
         transition: 0.2s;
         cursor: pointer;
 
-        .title {
+        h2 {
           position: relative;
           min-height: 20px;
           font-size: 15px;
@@ -122,41 +165,6 @@
           height: 100%;
           transform: translate(-50%, -50%);
         }
-      }
-    }
-  }
-
-  .categories {
-    text-align: left;
-
-    .category {
-      display: block;
-      padding: 15px;
-      margin-top: 10px;
-      transition: 0.2s;
-
-      i {
-        font-size: 28px;
-      }
-
-      h3 {
-        color: #FFF;
-        margin-top: 20px;
-      }
-
-      p {
-        margin: 5px 0 0;
-        font-size: 14px;
-        font-style: italic;
-        opacity: 0.8;
-      }
-
-      &:hover {
-        color: #FFF;
-      }
-
-      @media (min-width: 992px ) {
-        &:hover { margin-top: 0; }
       }
     }
   }

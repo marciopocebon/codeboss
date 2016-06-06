@@ -21,6 +21,11 @@
         templateUrl: 'views/pagamento.html'
       })
 
+      .state('cursos', {
+        url: '/cursos',
+        templateUrl: 'views/cursos.html'
+      })
+
       ;
 
     $locationProvider.html5Mode(true);

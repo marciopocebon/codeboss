@@ -2,16 +2,16 @@
   'use strict';
 
   $(function () {
-    $('#signin-link').on('click', function () {
-      $('#signin-overlay').addClass('show');
+    $('.btn-signin').on('click', function () {
+      $('.signin').addClass('signin--show');
     });
 
-    $('#signin-overlay').on('click', function (event) {
+    $('.signin').on('click', function (event) {
       var target = $(event.target);
-      if (target.attr('id') === 'signin-overlay') {
-        target.removeClass('show');
-      } else if (target.hasClass('close-login-box') || target.parent().hasClass('close-login-box')) {
-        $('#signin-overlay').removeClass('show');
+      if (target.hasClass('signin')) {
+        target.removeClass('signin--show');
+      } else if (target.hasClass('btn-close') || target.parent().hasClass('btn-close')) {
+        $('.signin').removeClass('signin--show');
       }
     });
   });

@@ -1,11 +1,18 @@
 .container-header {
   nav {
     display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid #EEE;
 
     ul li {
       display: inline-block;
       line-height: 32px;
-      margin-left: 15px;
+      margin-left: 20px;
+
+      a {
+        @extend a.link;
+      }
 
       &:first-child {
         margin-left: 0;
