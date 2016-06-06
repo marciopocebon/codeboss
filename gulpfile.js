@@ -1,3 +1,4 @@
+require('es6-promise').polyfill();
 var gulp         = require('gulp');
 var concat       = require('gulp-concat');
 var sass         = require('gulp-sass');
@@ -8,8 +9,8 @@ var ngmin        = require('gulp-ngmin');
 var sourcemaps   = require('gulp-sourcemaps');
 var notify       = require('gulp-notify');
 var wiredep      = require('wiredep').stream;
-var rename       = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync');
 
 /**
  * Assets paths
@@ -35,7 +36,8 @@ gulp.task('styles', function() {
     .pipe(cleanCss())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public/build'))
-    .pipe(notify("CSS generated!"));
+    .pipe(notify("CSS generated!"))
+    .pipe(browserSync.stream({once: true}));
 });
 
 /**
@@ -50,7 +52,8 @@ gulp.task('scripts', function() {
     .pipe(ngmin())
     .pipe(uglify({mangle: false}))
     .pipe(gulp.dest('./public/build'))
-    .pipe(notify("JS generated!"));
+    .pipe(notify("JS generated!"))
+    .pipe(browserSync.stream({once: true}));
 });
 
 /**
@@ -59,7 +62,8 @@ gulp.task('scripts', function() {
 gulp.task('templates', function() {
   gulp.src(['./public/index.html'])
     .pipe(wiredep())
-    .pipe(gulp.dest('./public/'));
+    .pipe(gulp.dest('./public/'))
+    .pipe(browserSync.stream({once: true}));;
 });
 
 /**
@@ -73,4 +77,20 @@ gulp.task('build', ['styles', 'scripts']);
 gulp.task('watch', function() {
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.scripts, ['scripts']);
+});
+
+/*
+ * Watch for changes
+ */
+gulp.task('default', ['watch']);
+
+/*
+ * Sync / auto reload
+ */
+gulp.task('serve', ['watch'], function() {
+    browserSync.init({
+        server: {
+            baseDir: "./public"
+        }
+    });
 });
