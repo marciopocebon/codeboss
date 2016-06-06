@@ -21,49 +21,44 @@
   <body>
     <!-- Login -->
     <div id="signin-overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-md-push-4 col-sm-6 col-sm-push-3">
-            <div class="login-box p-20">
-              <h2 class="text-black text-center m-b-15 f-20">Entre com redes sociais</h2>
-              <div class="m-b-30 p-b-30 b-b-1">
-                <a href="" class="btn btn-block btn-lg btn-alt">
-                  <i class="left-icon fa fa-github"></i>
-                  <span>Github</span>
-                </a>
-                <a href="" class="btn btn-block btn-warning btn-lg btn-alt m-t-10">
-                  <i class="left-icon fa fa-google"></i>
-                  <span>Gmail</span>
-                </a>
-                <a href="" class="btn btn-block btn-info btn-lg btn-alt m-t-10">
-                  <i class="left-icon fa fa-facebook"></i>
-                  <span>Facebook</span>
-                </a>
-              </div>
-              <h2 class="text-black text-center m-b-15 f-20">ou com e-mail</h2>
-              <form action="">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Informe seu e-mail">
-                </div>
-                <button href="" class="btn btn-block btn-primary btn-alt btn-lg">
-                  <i class="left-icon fa fa-sign-in"></i>
-                  <span>Entrar</span>
-                </button>
-              </form>
-            </div><!-- .login-box -->
-          </div>
+      <div class="login-box p-20">
+        <a href="#" class="close-login-box" title="Fechar"><i class="fa fa-close"></i></a>
+        <span class="title">Entre com redes sociais</span>
+        <div class="social-login-container">
+          <a href="#" class="btn btn-block btn-info btn-lg btn-alt btn-facebook">
+            <i class="left-icon fa fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="btn btn-block btn-warning btn-lg btn-alt m-t-10 btn-google">
+            <i class="left-icon fa fa-google"></i>
+            <span>Google</span>
+          </a>
+          <a href="#" class="btn btn-block btn-lg btn-alt m-t-10">
+            <i class="left-icon fa fa-github"></i>
+            <span>Github</span>
+          </a>
         </div>
-      </div>
+        <span class="ou-separator"><span>ou com e-mail</span></span>
+        <form action="">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Informe seu e-mail">
+          </div>
+          <button href="#" class="btn btn-block btn-primary btn-alt btn-lg">
+            <i class="left-icon fa fa-sign-in"></i>
+            <span>Entrar</span>
+          </button>
+        </form>
+      </div><!-- .login-box -->
     </div><!-- #signin-overlay -->
 
     <aside class="sidebar hidden-xs">
-      <a href="" class="text-info">
+      <a href="#">
         <i class="fa fa-facebook"></i>
       </a>
-      <a href="" class="text-default">
+      <a href="#">
         <i class="fa fa-twitter"></i>
       </a>
-      <a href="">
+      <a href="#">
         <i class="fa fa-github-alt"></i>
       </a>
     </aside>
@@ -84,10 +79,10 @@
             <!-- Menu -->
             <nav role="navigation" class="m-l-15 p-l-15 b-l-1">
               <ul>
-                <li><a class="link" href="">Sobre nós</a></li>
-                <li><a class="link" href="">Preço</a></li>
-                <li><a class="link" href="">Cursos</a></li>
-                <li><a class="link" href="">Blog</a></li>
+                <li><a class="link" href="#">Sobre nós</a></li>
+                <li><a class="link" href="#">Preço</a></li>
+                <li><a class="link" href="#">Cursos</a></li>
+                <li><a class="link" href="#">Blog</a></li>
               </ul>
             </nav>
           </div>
@@ -95,8 +90,8 @@
           <!-- Toolbar buttons -->
           <div class="col-sm-4">
             <div class="toolbar">
-              <!-- <a href="" class="link cb-link-bordered m-r-20">Criar conta</a> -->
-              <a href="" id="signin-link" class="btn btn-default">Entrar <i class="fa fa-user"></i></a>
+              <!-- <a href="#" class="link cb-link-bordered m-r-20">Criar conta</a> -->
+              <a href="#" id="signin-link" class="btn btn-default">Entrar <i class="fa fa-user"></i></a>
             </div><!-- .toolbar -->
           </div>
 
