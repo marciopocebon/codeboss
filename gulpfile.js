@@ -11,6 +11,7 @@ var notify       = require('gulp-notify');
 var wiredep      = require('wiredep').stream;
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
+var nodemon = require('gulp-nodemon');
 
 /**
  * Assets paths
@@ -67,11 +68,6 @@ gulp.task('templates', function() {
 });
 
 /**
- * Build dist folders
- */
-gulp.task('build', ['styles', 'scripts']);
-
-/**
  * Watch for changes
  */
 gulp.task('watch', function() {
@@ -79,18 +75,43 @@ gulp.task('watch', function() {
   gulp.watch(paths.scripts, ['scripts']);
 });
 
-/*
- * Watch for changes
+/**
+ * Sync html files
  */
-gulp.task('default', ['watch']);
+gulp.task('html', function() {
+    gulp.watch('./public/**/*.html').on('change', function() {
+        browserSync.reload();
+    });
+});
 
-/*
- * Sync / auto reload
+/**
+ * Start node server
  */
-gulp.task('serve', ['watch'], function() {
-    browserSync.init({
-        server: {
-            baseDir: "./public"
+gulp.task('nodemon', function (cb) {
+    var called = false;
+    return nodemon({script: 'index.js'}).on('start', function () {
+        if (!called) {
+            called = true;
+            cb();
         }
     });
 });
+
+/**
+ * Sync / auto reload
+ */
+gulp.task('serve', ['watch', 'html', 'nodemon'], function() {
+    browserSync.init(null, {
+        proxy: "http://localhost:8080"
+    });
+});
+
+/**
+ * Build dist folders
+ */
+gulp.task('build', ['styles', 'scripts']);
+
+/**
+ * Watch for changes
+ */
+gulp.task('default', ['watch']);
