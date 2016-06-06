@@ -14,7 +14,14 @@
       .state('login', {
         url: '/login',
         templateUrl: 'views/login.html'
-      });
+      })
+
+      .state('pagamento', {
+        url: '/pagamento',
+        templateUrl: 'views/pagamento.html'
+      })
+
+      ;
 
     $locationProvider.html5Mode(true);
   });

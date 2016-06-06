@@ -149,11 +149,6 @@
 /**
  * Border options
  */
-.noborder { border: 0; }
-.noborder-t { border-top: 0; }
-.noborder-l { border-left: 0; }
-.noborder-b { border-bottom: 0; }
-.noborder-r { border-right: 0; }
 
 .b-1 { border: 1px solid #eee; }
 .b-2 { border: 2px solid #eee; }
@@ -174,6 +169,12 @@
 .b-b-1 { border-bottom: 1px solid #eee; }
 .b-b-2 { border-bottom: 2px solid #eee; }
 .b-b-5 { border-bottom: 5px solid #eee; }
+
+.noborder { border: 0; }
+.noborder-t { border-top: 0; }
+.noborder-l { border-left: 0; }
+.noborder-b { border-bottom: 0; }
+.noborder-r { border-right: 0; }
 
 .b-default { border-color: $default-color; }
 .b-primary { border-color: $primary-color; }
