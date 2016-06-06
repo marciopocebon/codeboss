@@ -5,7 +5,8 @@
   background-color: #EEE;
   display: inline-block;
   padding: 4px 15px;
-  font-size: 13px;
+  font-size: 15px;
+  border: 0;
 
   i {
     margin-left: 5px;
@@ -23,16 +24,23 @@
 
   &.btn-block {
     display: block;
+    width: 100%;
   }
 
   &.btn-sm {
     padding: 3px 10px;
-    font-size: 11px;
+    font-size: 13px;
   }
 
   &.btn-lg {
     padding: 14px 20px;
-    font-size: 15px;
+    font-size: 18px;
+  }
+
+  &.btn-alt {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
   }
 
   &.btn-white {
