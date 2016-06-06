@@ -1,0 +1,15 @@
+.container-header {
+  nav {
+    display: inline-block;
+
+    ul li {
+      display: inline-block;
+      line-height: 32px;
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

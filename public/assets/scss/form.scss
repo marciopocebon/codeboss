@@ -10,13 +10,28 @@
     font-weight: 600;
   }
 
-  input.form-control {
+  .form-control {
     display: block;
     border: 1px solid #eee;
-    padding: 15px;
+    height: 46px;
+    line-height: 46px;
+    padding: 0 15px;
     color: #333;
     width: 100%;
     font: 13px Arial, sans-serif;
+    background: #FFF;
+    border-radius: 0;
+  }
+
+  select.form-control {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    padding-right: 30px;
+  }
+
+  &.form-inline .form-control {
+    display: inline-block;
+    width: auto;
   }
 
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */

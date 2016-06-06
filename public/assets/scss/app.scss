@@ -57,20 +57,6 @@
     }
   }
 
-  nav {
-    display: inline-block;
-
-    ul li {
-      display: inline-block;
-      line-height: 32px;
-      margin-left: 20px;
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-
   .toolbar {
     line-height: 32px;
     float: right;

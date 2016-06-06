@@ -2,6 +2,7 @@
  * Background colors
  */
 .bg-white   { background-color: #FFFFFF; }
+.bg-gray    { background-color: #F5F5F5; }
 .bg-default { background-color: $default-color; }
 .bg-primary { background-color: $primary-color; }
 .bg-info    { background-color: $info-color; }
@@ -14,6 +15,7 @@
  */
 .text-white   { color: #FFFFFF; }
 .text-black   { color: #000000; }
+.text-gray    { color: #999; }
 .text-default { color: $default-color; }
 .text-primary { color: $primary-color; }
 .text-info    { color: $info-color; }
