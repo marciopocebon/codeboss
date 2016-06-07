@@ -56,7 +56,6 @@
     }
 
     .box-social {
-
       .btn-facebook {
         background-color: #3B5998;
         color: #FFF;
@@ -178,10 +177,10 @@
   }
 
   .toolbar {
-    line-height: 32px;
     float: right;
+    line-height: 32px;
 
-    @media (max-width: 768px) {
+    /*@media (max-width: 768px) {
       & {
         float: none;
         margin-top: 15px;
@@ -193,8 +192,43 @@
           display: block;
         }
       }
-    }
+    }*/
   }
+}
+
+@media all and (max-width: 480px) and (min-width: 458px) {
+    .col-nav {
+        padding-right: 0;
+    }
+
+    .col-toolbar {
+        padding-left: 0;
+    }
+}
+
+@media all and (max-width: 458px) {
+    .col-nav {
+        width: 100%;
+    }
+
+    .col-toolbar {
+        width: 100%;
+        margin-top: 15px;
+
+        .toolbar {
+            float: none;
+            display: block;
+
+            a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    .container-main .box-main {
+        padding-top: 20px;
+    }
 }
 
 /**

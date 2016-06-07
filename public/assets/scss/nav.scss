@@ -20,3 +20,12 @@
     }
   }
 }
+
+@media all and (max-width: 330px) {
+    .container-header {
+        nav {
+            padding-left: 7.5px;
+            margin-left: 7.5px;
+        }
+    }
+}
