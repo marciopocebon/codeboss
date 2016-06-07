@@ -1,0 +1,39 @@
+.box-categorias {
+  background: #2895f1 url(../assets/img/bg-cursos.jpg) no-repeat center bottom;
+  padding-bottom: 350px;
+  padding-top: 50px;
+
+  .row {
+    margin-bottom: 20px;
+  }
+
+  .curso {
+    padding: 25px;
+    text-align: center;
+    background: #FFF;
+    margin-top: 5px;
+    transition: 0.2s;
+    display: block;
+
+    &:hover {
+      margin-top: 0;
+    }
+
+    .info {
+      margin-top: 15px;
+
+      h2 {
+        font-size: 24px;
+        color: #333;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+
+  }
+}
+

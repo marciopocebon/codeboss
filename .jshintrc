@@ -19,7 +19,8 @@
     "smarttabs": true,
     "multistr": true,
     "globals": {
-        "CodeBoss": false
+        "CodeBoss": false,
+        "$": false
     },
     "predef": ["angular"]
 }
