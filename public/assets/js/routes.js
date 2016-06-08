@@ -41,6 +41,11 @@
         templateUrl: 'views/aula.html'
       })
 
+      .state('blog', {
+        url: '/blog',
+        templateUrl: 'views/blog.html'
+      })
+
       ;
 
     $locationProvider.html5Mode(true);

@@ -242,3 +242,62 @@ a.link {
     color: $default-color;
   }
 }
+
+/**
+ * Pagination
+ */
+.paginate {
+  float: left;
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+
+  li {
+    height: 32px;
+    line-height: 32px;
+  }
+
+  .count {
+    display: block;
+    text-align: center;
+  }
+
+  .next a,
+  .prev a {
+    display: block;
+    padding: 0 10px;
+    background-color: #EEE;
+    transition: all linear 150ms;
+
+    &:focus,
+    &:hover {
+      background-color: darken(#EEE, 10%);
+    }
+  }
+
+  .prev {
+    float: left;
+
+    a:before {
+      content: '«';
+      margin-right: 5px;
+    }
+  }
+
+  .next {
+    float: right;
+
+    a:after {
+      content: '»';
+      margin-left: 5px;
+    }
+  }
+}
+
+/**
+ * Utils
+ */
+.separator {
+  font-style: normal;
+  margin: 0 5px;
+}
