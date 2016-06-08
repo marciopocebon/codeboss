@@ -18,7 +18,7 @@
           input.removeClass('error');
       }
     });
- 
+
     // fecha busca
     $('body').on('click', function(event) {
       if (!$(event.target).closest('#search').length)
@@ -58,64 +58,25 @@
 
 <div class="container container-blog">
   <p class="subtitle">Todos os posts</p>
-  <!--<div class="col-sm-9 container-lista">-->
-    <div class="col-sm-12 p-0 container-lista">
-    <article class="blog-item test">
-      <div class="image-container" style="background-image:url(assets/img/post-example.jpg)"></div>
-      <header>
-        <h1><a href="#">What is PhantomJS and How is it Used?</a></h1>
-      </header>
-      <footer>
-        <span>08/02/1995</span>
-        <a href="">phantonjs</a>
-        <a href="">javascript</a>
-      </footer>
-    </article>
-    <article class="blog-item test">
-      <div class="image-container" style="background-image:url(assets/img/post-example2.jpg)"></div>
-      <header>
-        <h1><a href="#">Contributing to Open Source Software with Git</a></h1>
-      </header>
-      <footer>
-        <span>08/02/1995</span>
-        <a href="">git</a>
-        <a href="">open source</a>
-      </footer>
-    </article>
-    <article class="blog-item test">
-      <div class="image-container" style="background-image:url(assets/img/post-example3.jpg)"></div>
-      <header>
-        <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
-      </header>
-      <footer>
-        <span>08/02/1995</span>
-        <a href="">es6</a>
-        <a href="">javascript</a>
-        <a href="">typescript</a>
-      </footer>
-    </article>
-
-    <ul class="paginate">
-      <li class="prev"><a href="#">Anterior</a></li>
-      <li class="next"><a href="#">Próxima</a></li>
-      <li class="count">1 de 12</li>
-    </ul>
-  </div>
-  <!--<aside class="col-sm-3">
-    <form action="" method="get" id="search">
-      <label for="s">
-        <input type="search" name="s" id="s" placeholder="Busca...">
-      </label>
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
-    <div class="box mais-vistas">
-      <div class="title">Postagens mais vistas</div>
-      <a href="#">Contributing to Open Source Software with Git</a>
-      <a href="#">Why You Shouldn’t Be Scared of TypeScript</a>
-      <a href="#">Contributing to Open Source Software with Git</a>
-      <a href="#">Why You Shouldn’t Be Scared of TypeScript</a>
-      <a href="#">Contributing to Open Source Software with Git</a>
+  <div class="row">
+    <div class="col-md-4">
+      <article class="blog-item test">
+        <a href="#"><div class="image-container" style="background-image:url(assets/img/post-example.jpg)"></div></a>
+        <div class="info">
+          <header>
+            <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+          </header>
+          <footer>
+            <span>08/02/1995</span>
+            <div class="tags">
+              <a href="">es6</a>
+              <a href="">javascript</a>
+              <a href="">typescript</a>
+            </div>
+          </footer>
+        </div>
+      </article>
     </div>
-  </aside>--> <!-- end com-sm-3 -->
+  </div>
 </div>
