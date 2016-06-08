@@ -33,7 +33,23 @@
         margin-top: 10px;
       }
     }
-
   }
 }
 
+/*.box-categorias {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+
+        .curso {
+            display: inline-block;
+            width: 24.25%;
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+        }
+    }
+}*/
