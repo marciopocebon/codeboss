@@ -14,16 +14,17 @@
 
     h1 {
       float: left;
-      width: calc(100% - 450px);
+      width: calc(100% - 300px);
     }
 
     #search {
       float: right;
-      width: 70px;
+      width: 35px;
+      margin-top: 15px;
       transition: all linear 200ms;
 
       &.open {
-        width: 450px;
+        width: 300px;
 
         input,
         button {
@@ -35,21 +36,21 @@
       input,
       button {
         float: left;
-        height: 70px;
-        line-height: 70px;
+        height: 40px;
+        line-height: 40px;
         border: 1px solid $info-color;
         background-color: $info-color;
       }
 
       label {
         float: left;
-        width: calc(100% - 70px);
+        width: calc(100% - 35px);
         transition: all linear 200ms;
       }
 
       input {
         width: 100%;
-        font-size: 40px;
+        font-size: 18px;
         padding: 0 20px;
         border-right: 0;
         font-style: italic;
@@ -57,18 +58,18 @@
         transition: all linear 200ms;
 
         &:focus {
-          border-bottom: 5px solid lighten($info-color, 5%);
+          border-bottom: 2px solid lighten($info-color, 5%);
         }
 
         &.error {
-          border-bottom: 5px solid $danger-color;
+          border-bottom: 2px solid $danger-color;
         }
       }
 
       button {
         position: relative;
-        font-size: 30px;
-        width: 70px;
+        font-size: 22px;
+        width: 35px;
         border-left: 0;
         text-align: center;
         transition: all linear 200ms;
