@@ -242,3 +242,25 @@
         }
     }*/
 }
+
+@media all and (max-width: 992px) and (min-width: 701px) {
+    .container-blog {
+        .blog-item {
+            width: calc(50% - 15px);
+            margin: 0 0 15px 0;
+
+            &:nth-child(2n) {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 700px) {
+    .container-blog {
+        .blog-item {
+            width: 100%;
+            margin: 0 0 30px 0;
+        }
+    }
+}
