@@ -1,0 +1,115 @@
+.box-header-title {
+  @extend .bg-info;
+  padding: 50px 0 0;
+  color: #FFF;
+
+  h1 {
+    font-weight: bold;
+    font-size: 64px;
+  }
+
+  .has-search {
+    float: left;
+    width: 100%;
+
+    h1 {
+      float: left;
+      width: calc(100% - 450px);
+    }
+
+    #search {
+      float: right;
+      width: 70px;
+      transition: all linear 200ms;
+
+      &.open {
+        width: 450px;
+
+        input,
+        button {
+          border-color: darken($info-color, 5%);
+          background-color: darken($info-color, 10%);
+        }
+      }
+
+      input,
+      button {
+        float: left;
+        height: 70px;
+        line-height: 70px;
+        border: 1px solid $info-color;
+        background-color: $info-color;
+      }
+
+      label {
+        float: left;
+        width: calc(100% - 70px);
+        transition: all linear 200ms;
+      }
+
+      input {
+        width: 100%;
+        font-size: 40px;
+        padding: 0 20px;
+        border-right: 0;
+        font-style: italic;
+        box-sizing: border-box;
+        transition: all linear 200ms;
+
+        &:focus {
+          border-bottom: 5px solid lighten($info-color, 5%);
+        }
+
+        &.error {
+          border-bottom: 5px solid $danger-color;
+        }
+      }
+
+      button {
+        position: relative;
+        font-size: 30px;
+        width: 70px;
+        border-left: 0;
+        text-align: center;
+        transition: all linear 200ms;
+
+        &:hover,
+        &:focus {
+          background-color: lighten($info-color, 5%);
+        }
+      }
+    }
+  }
+
+  nav {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+
+    ul {
+      background: darken($info-color, 10%);
+      padding: 10px 20px;
+
+      li {
+        display: inline-block;
+        margin-left: 20px;
+        font-weight: 600;
+        height: 40px;
+        line-height: 40px;
+
+        &.active a, a:hover, a:focus {
+          color: lighten($info-color, 25%);
+        }
+
+        &:first-child {
+          margin: 0;
+        }
+
+        @media (max-width: 768px) {
+          margin: 0;
+          display: block;
+        }
+      }
+    }
+  }
+}

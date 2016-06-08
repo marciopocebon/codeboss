@@ -1,7 +1,7 @@
 .container-blog {
   margin: 30px auto 50px auto;
 
-  > h1 {
+  .subtitle {
     color: #333;
     font-weight: 600;
     font-size: 24px;
@@ -12,90 +12,71 @@
 
   .container-lista {
     padding-left: 0;
-  }
 
-  aside {
-    padding-right: 0;
-
-    .box {
-      float: left;
-      margin-top: 15px;
-      border: 1px solid #EEE;
-
-      .title {
-        display: block;
-        line-height: 45px;
-        text-align: center;
-        font-weight: 600;
-        border-bottom: 1px solid #EEE;
-      }
-    }
-
-    .mais-vistas > a {
-      position: relative;
-      display: block;
-      padding: 10px 15px;
-
-      &:first-child:after {
-        content: normal;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 15px;
-        width: 40%;
-        height: 1px;
-        background-color: #EEE;
-      }
-    }
-  }
-
-  #search {
-    display: block;
-
-    input,
-    button {
-      float: left;
-      height: 35px;
-      line-height: 35px;
-      border: 1px solid #EEE;
-      background-color: #FFF;
-    }
-
-    label {
-      float: left;
-      width: calc(100% - 35px);
-    }
-
-    input {
-      width: 100%;
-      font-size: 15px;
-      padding: 0 10px;
-      border-right: 0;
-      font-style: italic;
-      box-sizing: border-box;
-
-      &:focus {
-        border-bottom-color: #009DDD;
-      }
-    }
-
-    button {
-      width: 35px;
-      border-left: 0;
-      text-align: center;
-      transition: all linear 200ms;
-
-      &:hover,
-      &:focus {
-        background-color: #EEE;
-      }
+    .paginate {
+      margin-top: 20px;
     }
   }
 
   .blog-item {
+      float: left;
+      width: 32%;
+      margin: 0 2% 30px 0;
+
+      &:nth-child(3n) {
+          margin-right: 0;
+      }
+
+      &:hover .image-container,
+      &:focus .image-container,
+      .image-container:hover,
+      .image-container:focus {
+          background-size: 105% auto;
+      }
+
+      .image-container {
+          position: relative;
+          float: left;
+          height: 200px;
+          width: 100%;
+          margin: 0 20px 10px 0;
+          text-align: center;
+          border-right: 1px solid darken(#F5F5F5, 5%);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          transition: all linear 250ms;
+      }
+
+      header {
+          h1 {
+              float: left;
+              width: 100%;
+              margin-bottom: 5px;
+              font-size: 20px;
+              color: #111;
+              font-weight: 600;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+          }
+      }
+
+      footer {
+        font-size: 14px;
+
+          span {
+              margin-right: 5px;
+          }
+
+        a {
+            font-style: italic;
+            margin-right: 2px;
+        }
+      }
+  }
+
+  /*.blog-item {
     display: block;
     height: 200px;
     padding: 10px;
@@ -178,5 +159,86 @@
         }
       }
     }
-  }
+  }*/
+
+    /*aside {
+      padding-right: 0;
+
+      .box {
+        float: left;
+        margin-top: 15px;
+        border: 1px solid #EEE;
+
+        .title {
+          display: block;
+          line-height: 45px;
+          text-align: center;
+          font-weight: 600;
+          border-bottom: 1px solid #EEE;
+        }
+      }
+
+      .mais-vistas > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+
+        &:first-child:after {
+          content: normal;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          width: 40%;
+          height: 1px;
+          background-color: #EEE;
+        }
+      }
+    }*/
+
+    /*#search {
+        display: block;
+
+        input,
+        button {
+            float: left;
+            height: 35px;
+            line-height: 35px;
+            border: 1px solid #EEE;
+            background-color: #FFF;
+        }
+
+        label {
+            float: left;
+            width: calc(100% - 35px);
+        }
+
+        input {
+            width: 100%;
+            font-size: 15px;
+            padding: 0 10px;
+            border-right: 0;
+            font-style: italic;
+            box-sizing: border-box;
+
+            &:focus {
+                border-bottom-color: #009DDD;
+            }
+        }
+
+        button {
+            width: 35px;
+            border-left: 0;
+            text-align: center;
+            transition: all linear 200ms;
+
+            &:hover,
+            &:focus {
+                background-color: #EEE;
+            }
+        }
+    }*/
 }

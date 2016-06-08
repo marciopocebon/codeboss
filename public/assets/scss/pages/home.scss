@@ -113,18 +113,14 @@
     article {
       position: relative;
 
-      @media (max-width: 992px ) {
+      @media (max-width: 992px) {
         & { margin-bottom: 15px }
       }
 
       &:focus header,
-        &:hover header {
-          padding: 30px 15px 15px;
-
-          a {
-            color: #FFF;
-          }
-        }
+      &:hover header {
+        padding: 30px 15px 15px;
+      }
 
       header {
         position: absolute;
