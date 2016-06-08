@@ -25,6 +25,9 @@
       "main": [
         "css/font-awesome.min.css"
       ]
+    },
+    "jquery": {
+      "main": []
     }
   }
 }

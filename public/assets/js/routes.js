@@ -36,11 +36,6 @@
         templateUrl: 'views/curso.html'
       })
 
-      .state('aula', {
-        url: '/aula',
-        templateUrl: 'views/aula.html'
-      })
-
       .state('blog', {
         url: '/blog',
         templateUrl: 'views/blog.html'

@@ -11,6 +11,38 @@
   </div>
 </div>
 
+<script type="text/javascript">
+  $(function() {
+    $('ul.list-aulas li a').on('click', function(e) {
+      var target = $('.box-aula');
+      if (!target.hasClass('box-aula-open')) {
+        var _h = $(window).height();
+
+        $('.box-aula').addClass('box-aula-open');
+        $('.box-aula').height(_h);
+        $('.box-aula iframe').height(_h - 100);
+
+        $('aside').hide();
+      }
+
+      $('html, body').stop().animate({ scrollTop: (target.offset().top) }, 500, 'swing');
+
+      e.preventDefault();
+    });
+  });
+</script>
+
+<div class="box-cursos box-aula">
+  <div class="container-fluid">
+    <iframe src="https://player.vimeo.com/video/49384334" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+    <div class="info">
+      <h2>Estrutura de pastas</h2>
+      <time>18 min</time>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <ul class="info-curso">
     <li><i class="fa fa-user"></i> Apresentado por <strong>Diego Schell Fernandes</strong></li>
@@ -25,45 +57,45 @@
       <ul class="list-aulas">
         <li class="header">Aulas</li>
         <li class="watched">
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-check"></i> Introdução
             <span class="label label-primary m-l-10">Grátis</span>
             <time>18 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Estrutura de pastas
             <span class="label label-primary m-l-10">Grátis</span>
             <time>14 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Configuração Gulp e Git
             <time>10 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Criando o app e entendo o Angular
             <time>25 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Primeiro controller
             <time>22 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Service e directive
             <time>17 min</time>
           </a>
         </li>
         <li>
-          <a href="aula">
+          <a href="#">
             <i class="fa fa-play-circle"></i> Views e snippets
             <time>19 min</time>
           </a>
