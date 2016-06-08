@@ -13,14 +13,15 @@
 
 <script type="text/javascript">
   $(function() {
-    $('ul.list-aulas li a').on('click', function(e) {
+    $('ul.list-aulas li').on('click', function(e) {
       var target = $('.box-aula');
+      $(this).addClass('active').siblings('li').removeClass('active');
       if (!target.hasClass('box-aula-open')) {
         var _h = $(window).height();
 
         $('.box-aula').addClass('box-aula-open');
         $('.box-aula').height(_h);
-        $('.box-aula iframe').height(_h - 100);
+        $('.box-aula iframe').height(_h - 185);
 
         $('aside').hide();
       }
@@ -29,16 +30,39 @@
 
       e.preventDefault();
     });
+
+    $('.box-aula .close').on('click', function() {
+      var target = $('.box-aula');
+      $('ul.list-aulas li').removeClass('active');
+      target.removeClass('box-aula-open').css({height: 0});
+      $('aside').show();
+    });
   });
 </script>
 
 <div class="box-cursos box-aula">
   <div class="container-fluid">
+    <div class="top">
+      <ul>
+        <li><a href="" class="btn btn-default btn-alt">Dúvidas <span class="hidden-xs">da aula</span> <i class="fa fa-question"></i> </a></li>
+        <li><a href="" class="btn btn-default btn-alt">Discussão <span class="hidden-xs">do curso</span> <i class="fa fa-comments"></i> </a></li>
+        <li><a href="" class="btn btn-alt">Enviar <i class="fa fa-share"></i> </a></li>
+      </ul>
+      <a href="" class="close"><i class="fa fa-remove"></i></a>
+      <div class="clearfix"></div>
+    </div>
     <iframe src="https://player.vimeo.com/video/49384334" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
     <div class="info">
-      <h2>Estrutura de pastas</h2>
-      <time>18 min</time>
+      <div class="pull-left">
+        <p>AngularJS: Iniciante</p>
+        <h2>Estrutura de pastas</h2>
+      </div>
+      <div class="pull-right">
+        <p>Iniciante</p>
+        <time>18 min</time>
+      </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </div>

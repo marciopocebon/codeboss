@@ -93,6 +93,10 @@ ul.info-curso {
         color: #333;
       }
 
+      &.active a {
+        background: lighten($default-color, 50%);
+      }
+
       &:first-child a {
         border:0;
       }
@@ -110,21 +114,54 @@ ul.info-curso {
   text-align: center;
   color: #FFF;
   height: 0;
-  transition: 0.2s ease-in;
+  transition: 0.5s ease-in;
 
   &.box-aula-open {
     padding: 20px 0;
 
-    iframe {
+    iframe, .info, .top {
       display: block;
     }
 
     @media (max-width: 992px) {
-      height: 600px !important;
+      height: 660px !important;
     }
 
     @media (max-width: 768px) {
-      height: 450px !important;
+      height: 510px !important;
+    }
+  }
+
+  .top {
+    height: 35px;
+    margin-bottom: 20px;
+    display: none;
+
+    ul {
+      font-size: 14px;
+      float: left;
+
+      li {
+        display: inline-block;
+        margin-left: 5px;
+        color: #666;
+
+        a {
+          line-height: 28px;
+        }
+
+        &:first-child {
+          margin: 0;
+        }
+      }
+    }
+
+    .close {
+      color: #666;
+      font-size: 20px;
+      text-align: right;
+      float: right;
+      line-height: 35px;
     }
   }
 
@@ -146,6 +183,7 @@ ul.info-curso {
   .info {
     margin-top: 20px;
     text-align: left;
+    display: none;
 
     h2, time {
       line-height: 32px;
@@ -153,13 +191,10 @@ ul.info-curso {
       font-size: 20px;
     }
 
-    h2 {
-      float: left;
+    .pull-right {
+      text-align: right;
     }
 
-    time {
-      float: right;
-    }
   }
 }
 
