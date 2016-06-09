@@ -1,0 +1,111 @@
+@import 'variables';
+
+@mixin clearfix($before: false) {
+  @if ($before) {
+    &::before {
+     content: "";
+     display: table;
+     clear: both;
+    }
+  }
+
+  &::after {
+   content: "";
+   display: table;
+   clear: both;
+  }
+}
+
+// Modified version of bootstrap 4.0.0-alpha.2
+@import 'bootstrap';
+
+%new-grid-column {
+  position: relative;
+  min-height: 1px;
+}
+
+// grid
+@for $i from 1 through $grid-columns-count {
+  .grid-#{$i} {
+   @include clearfix(true);
+
+   > * {
+    float: left;
+    @extend %new-grid-column;
+    color: #111;
+    background-color: #EEE;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @if ($i == 1) {
+     width: 100%;
+    } @elseif ($grid-gutter-width <= 0) {
+     width: calc((100% / #{$i}));
+    } @else {
+     width: calc((100% / #{$i}) - (((#{$i} - 1) * #{$grid-gutter-width}) / #{$i}));
+     margin-right: $grid-gutter-width;
+
+     &:nth-child(#{$i}n) {
+      margin-right: 0;
+     }
+    }
+   }
+  }
+}
+
+@mixin grid($coluns, $gutter: 0, $force: false) {
+  @include clearfix(true);
+
+  > * {
+   float: left;
+   @extend %new-grid-column;
+   color: #111;
+   background-color: #EEE;
+   text-align: center;
+   margin-bottom: 10px;
+
+   @if ($coluns == 1) {
+    width: 100%;
+   } @elseif ($gutter <= 0) {
+    width: calc((100% / #{$coluns}));
+   } @else {
+    width: calc((100% / #{$coluns}) - (((#{$coluns} - 1) * #{$gutter}) / #{$coluns}));
+
+    @if ($force) {
+     margin-right: $gutter !important;
+
+     &:nth-child(#{$coluns}n) {
+      margin-right: 0 !important;
+     }
+    } @else {
+     margin-right: $gutter;
+
+     &:nth-child(#{$coluns}n) {
+      margin-right: 0;
+     }
+    }
+   }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @for $i from 1 through $grid-columns-count {
+   @media all and (max-width: map-get($grid-breakpoints, $breakpoint)) {
+    .grid-#{$breakpoint}-#{$i} {
+     @include grid($i, $grid-gutter-width, true);
+    }
+   }
+
+   @each $bp in map-keys($grid-breakpoints) {
+    @media all and (min-width: (map-get($grid-breakpoints, $bp) + 1)) and (max-width: map-get($grid-breakpoints, $breakpoint)) {
+     .grid-#{$breakpoint}-#{$bp}-#{$i} {
+      @include grid($i, $grid-gutter-width, true);
+     }
+    }
+   }
+  }
+}
+
+.grid {
+  @include grid(12, 10px);
+}

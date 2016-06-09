@@ -71,7 +71,6 @@
 .m-r-50  { margin-right: 50px; }
 .m-r-100 { margin-right: 100px; }
 
-
 /**
  * Padding
  */
@@ -311,4 +310,10 @@ a.link {
 .separator {
   font-style: normal;
   margin: 0 5px;
+}
+
+@media (max-width:767px) {
+  .hidden-xs {
+    display:none !important
+  }
 }

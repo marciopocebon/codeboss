@@ -58,40 +58,36 @@
       color: #000;
     }
 
-    .row {
+    .grid-3 {
       margin-top: 50px;
-
-      article {
+      .comment {
+        color: #999;
+        background: #FFF;
+        border-width: 3px;
+        border-style: solid;
+        @extend .b-primary;
+        padding: 50px 20px;
         margin-bottom: 20px;
 
-        .comment {
-          color: #999;
-          background: #FFF;
-          border-width: 3px;
-          border-style: solid;
-          @extend .b-primary;
-          padding: 50px 20px;
+        h2 {
+          color: #000;
+          margin-top: 15px;
+        }
 
-          h2 {
-            color: #000;
-            margin-top: 15px;
-          }
+        img {
+          width: 96px;
+          height: 96px;
+          border-radius: 50%;
+        }
 
-          img {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-          }
+        .message {
+          margin-top: 20px;
+          color: #000;
+          font-weight: 500;
+        }
 
-          .message {
-            margin-top: 20px;
-            color: #000;
-            font-weight: 500;
-          }
-
-          .course-about {
-            margin-top: 20px;
-          }
+        .course-about {
+          margin-top: 20px;
         }
       }
     }
