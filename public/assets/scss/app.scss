@@ -244,19 +244,9 @@
       }
     }
 
-    /*@media (max-width: 768px) {
-      & {
-        float: none;
-        margin-top: 15px;
-        padding-top: 15px;
-        border-top: 1px solid #EEE;
-        text-align: center;
-
-        a.btn-signin {
-          display: block;
-        }
-      }
-    }*/
+    .btn-signin {
+      float: right;
+    }
   }
 }
 
