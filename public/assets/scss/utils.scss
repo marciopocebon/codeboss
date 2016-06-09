@@ -232,6 +232,7 @@
   font-size: 12px;
 
  &.label-primary { background: $primary-color; color: #FFF; }
+ &.label-default { background: $default-color; color: #FFF; }
 }
 
 /**

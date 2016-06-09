@@ -66,16 +66,22 @@ ul.info-curso {
   ul.list-aulas {
 
     li {
-      &.header, a {
+      &.header, &.modulo, a {
         border: 1px solid #EEE;
         border-top: 0;
         padding: 15px;
-        font-weight: 600;
         display: block;
 
         &.header {
           @extend .bg-info;
           color: #FFF;
+          font-weight: 600;
+        }
+
+        &.modulo {
+          background: #f5f5f5;
+          color: #666;
+          font-weight: 600;
         }
 
         i {
@@ -84,6 +90,14 @@ ul.info-curso {
 
         time {
           float: right;
+
+          @media (max-width: 768px) {
+            display: block;
+            font-size: 13px;
+            float: none;
+            margin-left: 22px;
+            font-weight: 300;
+          }
         }
       }
 
@@ -114,7 +128,7 @@ ul.info-curso {
   text-align: center;
   color: #FFF;
   height: 0;
-  transition: 0.5s ease-in;
+  transition: 0.2s ease-in;
 
   &.box-aula-open {
     padding: 20px 0;
@@ -170,7 +184,7 @@ ul.info-curso {
     width: 100%;
     height: 100%;
     border: 10px solid #444;
-    transition: 0.5s ease-in;
+    transition: 0.2s ease-in;
 
     @media (max-width: 992px) {
       height: 500px !important;
@@ -196,6 +210,144 @@ ul.info-curso {
       text-align: right;
     }
 
+  }
+}
+
+.box-discussao {
+  margin: 50px auto;
+  text-align: center;
+
+  h2 {
+    font-weight: 600;
+    color: #000;
+    font-size: 36px;
+  }
+
+  .comments {
+    margin-top: 30px;
+
+    p {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    form {
+      text-align: left;
+    }
+
+    .trumbowyg-box,
+    .trumbowyg-editor {
+      min-height: 120px ;
+
+      ul {
+        list-style: disc;
+      }
+
+      ol {
+        list-style: decimal;
+      }
+    }
+
+    ul.comment-list {
+      margin-top: 20px;
+
+      li {
+        margin-bottom: 20px;
+
+        .comentario {
+          padding: 20px;
+          border: 1px solid #EEE;
+          text-align: left;
+          position: relative;
+        }
+
+        &.resposta {
+
+          .comentario {
+            margin-top: 10px;
+            background: #f5f5f5;
+
+            &:after, &:before {
+              bottom: 100%;
+              left: 85%;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none;
+            }
+
+            &:after {
+              border-color: rgba(255, 255, 255, 0);
+              border-bottom-color: #f5f5f5;
+              border-width: 20px;
+              margin-left: -20px;
+            }
+
+            &:before {
+              border-color: rgba(238, 238, 238, 0);
+              border-bottom-color: #eee;
+              border-width: 21px;
+              margin-left: -21px;
+            }
+          }
+        }
+
+        .img {
+          text-align: center;
+
+          img {
+            border-radius: 50%;
+          }
+
+          .label {
+            margin-top: 10px;
+          }
+        }
+
+        .header {
+          line-height: 25px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid #ddd;
+
+          @media (max-width: 768px) {
+            margin-top: 10px;
+          }
+
+          strong {
+            color: #000;
+            font-size: 18px;
+          }
+
+          time {
+            font-size: 13px;
+          }
+        }
+
+        .content {
+          margin-top: 20px;
+          color: #666;
+          line-height: 32px;
+
+          pre {
+            display: inline;
+
+            code {
+              background: #f5f5f5;
+              padding: 3px;
+              border: 1px solid #EEE;
+              border-radius: 3px;
+              font-size: 14px;
+            }
+          }
+
+          .link-resposta {
+            @extend .text-default;
+          }
+        }
+      }
+    }
   }
 }
 

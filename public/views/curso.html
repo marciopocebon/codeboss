@@ -19,14 +19,15 @@
       if (!target.hasClass('box-aula-open')) {
         var _h = $(window).height();
 
-        $('.box-aula').addClass('box-aula-open');
         $('.box-aula').height(_h);
         $('.box-aula iframe').height(_h - 185);
 
         $('aside').hide();
       }
 
-      $('html, body').stop().animate({ scrollTop: (target.offset().top) }, 500, 'swing');
+      $('html, body').stop().animate({ scrollTop: (target.offset().top) }, 500, 'swing', function() {
+        $('.box-aula').addClass('box-aula-open');
+      });
 
       e.preventDefault();
     });
@@ -37,6 +38,12 @@
       target.removeClass('box-aula-open').css({height: 0});
       $('aside').show();
     });
+
+    $('.btn-discussao').on('click', function(e) {
+      $('html, body').animate({ scrollTop: $('.box-discussao').offset().top - 20 }, 500);
+
+      e.preventDefault();
+    });
   });
 </script>
 
@@ -45,8 +52,7 @@
     <div class="top">
       <ul>
         <li><a href="" class="btn btn-default btn-alt">Dúvidas <span class="hidden-xs">da aula</span> <i class="fa fa-question"></i> </a></li>
-        <li><a href="" class="btn btn-default btn-alt">Discussão <span class="hidden-xs">do curso</span> <i class="fa fa-comments"></i> </a></li>
-        <li><a href="" class="btn btn-alt">Enviar <i class="fa fa-share"></i> </a></li>
+        <li><a href="" class="btn btn-default btn-alt btn-discussao">Discussão <span class="hidden-xs">do curso</span> <i class="fa fa-comments"></i> </a></li>
       </ul>
       <a href="" class="close"><i class="fa fa-remove"></i></a>
       <div class="clearfix"></div>
@@ -79,13 +85,20 @@
   <div class="row">
     <div class="col-md-12">
       <ul class="list-aulas">
-        <li class="header">Aulas</li>
+        <li class="header">
+          Aulas
+          <p class="pull-right">4/17 concluído</p>
+        </li>
         <li class="watched">
           <a href="#">
             <i class="fa fa-check"></i> Introdução
             <span class="label label-primary m-l-10">Grátis</span>
             <time>18 min</time>
           </a>
+        </li>
+        <li class="modulo">
+          Estrutura do projeto
+          <p class="pull-right">2/3</p>
         </li>
         <li>
           <a href="#">
@@ -105,6 +118,10 @@
             <i class="fa fa-play-circle"></i> Criando o app e entendo o Angular
             <time>25 min</time>
           </a>
+        </li>
+        <li class="modulo">
+          Criando a aplicação
+          <p class="pull-right">2/3</p>
         </li>
         <li>
           <a href="#">
@@ -126,5 +143,136 @@
         </li>
       </ul>
     </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('textarea').trumbowyg({
+      lang: 'pt',
+      resetCss: true,
+      autogrow: true,
+      btns: [
+        ['viewHTML'],
+        'btnGrp-semantic',
+        ['link'],
+        'btnGrp-lists',
+        ['preformatted']
+      ]
+    });
+  });
+</script>
+<div class="box-discussao container">
+  <h2>Discussão</h2>
+  <p>Converse e discuta com outros integrantes do curso</p>
+  <div class="comments">
+    <form action="">
+      <div class="form-group">
+        <textarea name="" placeholder="Deixe um comentário sobre o curso"></textarea>
+      </div>
+    </form>
+    <ul class="comment-list">
+      <li>
+        <div class="comentario">
+          <div class="row">
+            <div class="img col-md-2 col-sm-3">
+              <img src="assets/img/avatar1.png" alt="">
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <div class="header">
+                <strong>Diego Fernandes</strong>
+                <time class="pull-right">3 meses atrás</time>
+              </div>
+              <div class="clearfix"></div>
+              <div class="content">
+                The spread operator is an ES6 feature, not a React feature. It's a direct way to access a collection as an iterable. So if you had an array like <pre><code>let myArray = [0, 1, 2, 3]</code></pre> you can access every element with the spread operator. <pre><code>console.log(...myArray)</code></pre> would output 0 1 2 3. <pre><code>Math.max(...myArray)</code></pre> would output 3. Please let me know if my explanation was any good.
+              </div>
+              <div class="content">
+                <a href="" class="link-resposta">Responder</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="resposta">
+        <div class="row">
+          <div class="col-xs-10 col-xs-push-2">
+            <div class="comentario">
+              <div class="row">
+                <div class="img col-md-2 col-sm-3">
+                  <img src="assets/img/avatar2.png" alt="">
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <div class="header">
+                    <strong>Seiton Clouza</strong>
+                    <time class="pull-right">3 meses atrás</time>
+                    <p>Em resposta a: Diego Fernandes</p>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="content">
+                    The spread operator is an ES6 feature, not a React feature. It's a direct way to access a collection as an iterable. So if you had an array like <pre><code>let myArray = [0, 1, 2, 3]</code></pre>
+                  </div>
+                  <div class="content">
+                    <a href="" class="link-resposta">Responder</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="resposta resposta-admin">
+        <div class="row">
+          <div class="col-xs-10 col-xs-push-2">
+            <div class="comentario">
+              <div class="row">
+                <div class="img col-md-2 col-sm-3">
+                  <img src="assets/img/avatar2.png" alt="">
+                  <p>
+                    <span class="label label-default">Administrador</span>
+                  </p>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <div class="header">
+                    <strong>O Adm</strong>
+                    <time class="pull-right">3 meses atrás</time>
+                    <p>Em resposta a: Seiton Clouza</p>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="content">
+                    The spread operator is an ES6 feature, not a React feature. It's a direct way to access a collection as an iterable. So if you had an array like <pre><code>let myArray = [0, 1, 2, 3]</code></pre>
+                  </div>
+                  <div class="content">
+                    <a href="" class="link-resposta">Responder</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="comentario">
+          <div class="row">
+            <div class="img col-md-2 col-sm-3">
+              <img src="assets/img/avatar3.png" alt="">
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <div class="header">
+                <strong>Diego Fernandes</strong>
+                <time class="pull-right">3 meses atrás</time>
+              </div>
+              <div class="clearfix"></div>
+              <div class="content">
+                The spread operator is an ES6 feature, not a React feature. It's a direct way to access a collection as an iterable. So if you had an array like <pre><code>let myArray = [0, 1, 2, 3]</code></pre> you can access every element with the spread operator. <pre><code>console.log(...myArray)</code></pre> would output 0 1 2 3. <pre><code>Math.max(...myArray)</code></pre> would output 3. Please let me know if my explanation was any good.
+              </div>
+              <div class="content">
+                <a href="" class="link-resposta">Responder</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>

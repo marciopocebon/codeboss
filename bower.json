@@ -18,7 +18,8 @@
     "angular": "^1.5.6",
     "angular-ui-router": "^0.3.0",
     "jquery": "^2.2.4",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "trumbowyg": "^2.1.0"
   },
   "overrides": {
     "font-awesome": {
@@ -28,6 +29,14 @@
     },
     "jquery": {
       "main": []
+    },
+    "trumbowyg": {
+      "main": [
+        "dist/trumbowyg.min.js",
+        "dist/langs/pt.min.js",
+        "dist/plugins/preformatted/trumbowyg.preformatted.min.js",
+        "dist/ui/trumbowyg.min.css"
+      ]
     }
   }
 }

@@ -23,6 +23,14 @@
     border-radius: 0;
   }
 
+  textarea.form-control {
+    height: 120px;
+    padding: 15px;
+    height: 76px;
+    line-height: 23px;
+    resize: vertical;
+  }
+
   select.form-control {
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
