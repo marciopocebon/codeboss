@@ -2,20 +2,20 @@
 <html lang="pt" ng-app="CodeBoss">
   <head>
     <meta charset="utf-8">
-    <title>{{{ $title or 'codeboss | Cursos de desenvolvimento web' }}}</title>
+    <title>codeboss | Cursos de desenvolvimento web</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300">
-    <link rel="stylesheet" href="assets/build/app.min.css">
+    <link rel="stylesheet" href="build/app.min.css">
 
     <base href="/">
 
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- bower:css -->
-    <link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/libs/trumbowyg/dist/ui/trumbowyg.min.css" />
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="libs/trumbowyg/dist/ui/trumbowyg.min.css" />
     <!-- endbower -->
   </head>
   <body>
@@ -70,9 +70,9 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-7 col-nav">
-            <a href="{{ url('/') }}">
+            <a ui-sref="home">
               <h1 class="logo">
-                <img src="{{ asset('assets/images/logo64.png') }}" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+                <img src="assets/img/logo64.png" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
                 <span class="hidden-xs">codeboss.com.br</span>
               </h1><!-- .logo -->
             </a>
@@ -102,7 +102,7 @@
     </header><!-- .container-header -->
 
     <div class="container-main">
-      @yield('content');
+      <div ui-view></div>
     </div><!-- .container-main -->
 
     <footer class="container-fluid container-footer">
@@ -124,7 +124,7 @@
 
           <div class="col-xs-3">
             <div class="pull-right">
-              <img src="{{ asset('assets/images/logo32.png') }}" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+              <img src="assets/img/logo32.png" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
             </div>
           </div>
 
@@ -133,13 +133,15 @@
     </footer><!-- .container-footer -->
   </body>
 
-  <script src="assets/libs/jquery/dist/jquery.js"></script>
+  <script src="libs/jquery/dist/jquery.js"></script>
 
   <!-- bower:js -->
-  <script src="assets/libs/trumbowyg/dist/trumbowyg.min.js"></script>
-  <script src="assets/libs/trumbowyg/dist/langs/pt.min.js"></script>
-  <script src="assets/libs/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.min.js"></script>
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="libs/trumbowyg/dist/trumbowyg.min.js"></script>
+  <script src="libs/trumbowyg/dist/langs/pt.min.js"></script>
+  <script src="libs/trumbowyg/dist/plugins/preformatted/trumbowyg.preformatted.min.js"></script>
   <!-- endbower -->
 
-  <script src="assets/build/app.min.js"></script>
+  <script src="build/app.min.js"></script>
 </html>
