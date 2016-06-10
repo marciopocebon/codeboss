@@ -10,23 +10,22 @@ var sourcemaps   = require('gulp-sourcemaps');
 var notify       = require('gulp-notify');
 var wiredep      = require('wiredep').stream;
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync');
-var nodemon = require('gulp-nodemon');
+var browserSync  = require('browser-sync');
 
 /**
  * Assets paths
  * @type {Object}
  */
 var paths = {
-  styles: ['./public/assets/scss/**/*.scss'],
-  scripts: ['./public/assets/js/**/*.js']
+  styles: ['./resources/assets/scss/**/*.scss'],
+  scripts: ['./resources/assets/js/**/*.js']
 };
 
 /**
  * Compile styles
  */
 gulp.task('styles', function() {
-  gulp.src(['./public/assets/scss/app.scss'])
+  gulp.src(['./resources/assets/scss/app.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('app.min.css'))
@@ -58,10 +57,10 @@ gulp.task('scripts', function() {
  * Compile JADE templates and inject bower dependencies
  */
 gulp.task('templates', function() {
-  gulp.src(['./public/index.html'])
+  gulp.src(['./resources/views/layouts/master.blade.php'])
     .pipe(wiredep())
-    .pipe(gulp.dest('./public/'))
-    .pipe(browserSync.stream({once: true}));;
+    .pipe(gulp.dest('./resources/views/layouts'))
+    .pipe(browserSync.stream({once: true}));
 });
 
 /**
@@ -76,28 +75,15 @@ gulp.task('watch', function() {
  * Sync html files
  */
 gulp.task('html', function() {
-    gulp.watch('./public/**/*.html').on('change', function() {
+    gulp.watch('./resources/views/**/*.blade.php').on('change', function() {
         browserSync.reload();
-    });
-});
-
-/**
- * Start node server
- */
-gulp.task('nodemon', function (cb) {
-    var called = false;
-    return nodemon({script: 'index.js'}).on('start', function () {
-        if (!called) {
-            called = true;
-            cb();
-        }
     });
 });
 
 /**
  * Sync / auto reload
  */
-gulp.task('serve', ['watch', 'html', 'nodemon'], function() {
+gulp.task('serve', ['watch', 'html'], function() {
     browserSync.init(null, {
         proxy: "http://localhost:8080"
     });
