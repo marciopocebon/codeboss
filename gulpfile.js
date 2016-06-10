@@ -32,7 +32,7 @@ gulp.task('styles', function() {
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(cleanCss())
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./public/build'))
+    .pipe(gulp.dest('./public/assets/build'))
     .pipe(notify("CSS generated!"))
     .pipe(browserSync.stream({once: true}));
 });
@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
     .pipe(concat('app.min.js'))
     .pipe(ngmin())
     .pipe(uglify({mangle: false}))
-    .pipe(gulp.dest('./public/build'))
+    .pipe(gulp.dest('./public/assets/build'))
     .pipe(notify("JS generated!"))
     .pipe(browserSync.stream({once: true}));
 });
