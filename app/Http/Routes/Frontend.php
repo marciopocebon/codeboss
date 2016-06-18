@@ -14,6 +14,10 @@ Route::group(['namespace' => 'Frontend'], function ()
       return view('frontend.blog');
   });
 
+  Route::get('/contato', function() {
+      return view('frontend.contato');
+  });
+
   Route::get('/cadastro', function() {
       return view('frontend.cadastro');
   });

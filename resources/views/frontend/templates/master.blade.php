@@ -11,7 +11,7 @@
 
     <base href="/">
 
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="{{ url('favicon.png') }}" />
 
     <!-- bower:css -->
     <link rel="stylesheet" href="{{ asset('assets/libs/font-awesome/css/font-awesome.min.css') }}" />
@@ -82,6 +82,7 @@
                         <li><a href="{{ url('sobre-nos') }}">Sobre nós</a></li>
                         <li><a href="{{ url('categorias') }}">Cursos</a></li>
                         <li><a href="{{ url('blog') }}">Blog</a></li>
+                        <li><a href="{{ url('contato') }}">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -124,7 +125,12 @@
 
             <div class="col-xs-3">
                 <div class="pull-right">
-                    <img src="{{ asset('assets/images/logo32.png') }}" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="#"><i class="fa fa-facebook-official"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="{{ url('') }}">
+                        <img src="{{ asset('assets/images/logo32.png') }}" alt="codeboss | Cursos em video-aulas de desenvolvimento web">
+                    </a>
                 </div>
             </div>
 
