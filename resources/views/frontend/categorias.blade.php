@@ -1,11 +1,11 @@
-@extends('templates.master', ['title' => 'Categorias'])
+@extends('frontend.templates.master', ['title' => 'Categorias'])
 
 @section('content')
 <div class="box-categorias">
   <div class="container grid-4 grid-lg-md-3 grid-md-sm-2 grid-sm-1">
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/frontend.png" alt="">
+        <img src="{{ asset('assets/images/frontend.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Front-end</h2>
@@ -13,9 +13,9 @@
         <p>React, Gulp, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/backend.png" alt="">
+        <img src="{{ asset('assets/images/backend.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Back-end</h2>
@@ -23,9 +23,9 @@
         <p>Laravel, Node, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/mobile.png" alt="">
+        <img src="{{ asset('assets/images/mobile.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Mobile</h2>
@@ -33,9 +33,9 @@
         <p>jQuery Mobile, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/design.png" alt="">
+        <img src="{{ asset('assets/images/design.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Design & UX</h2>
@@ -43,9 +43,9 @@
         <p>Interfaces, E-mail, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/ecommerce.png" alt="">
+        <img src="{{ asset('assets/images/ecommerce.png') }}" alt="">
       </div>
       <div class="info">
         <h2>E-commerce</h2>
@@ -53,9 +53,9 @@
         <p>Módulos, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/seo.png" alt="">
+        <img src="{{ asset('assets/images/seo.png') }}" alt="">
       </div>
       <div class="info">
         <h2>SEO</h2>
@@ -63,9 +63,9 @@
         <p>padrões, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/infra.png" alt="">
+        <img src="{{ asset('assets/images/infra.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Infra</h2>
@@ -73,9 +73,9 @@
         <p>Ubuntu, Linux, entre outros...</p>
       </div>
     </a>
-    <a href="cursos" class="curso">
+    <a href="{{ url('cursos') }}" class="curso">
       <div class="image">
-        <img src="assets/images/business.png" alt="">
+        <img src="{{ asset('assets/images/business.png') }}" alt="">
       </div>
       <div class="info">
         <h2>Business</h2>

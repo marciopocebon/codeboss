@@ -1,4 +1,4 @@
-@extends('templates.master', ['title' => 'Página inicial'])
+@extends('frontend.templates.master', ['title' => 'Página inicial'])
 
 @section('content')
 <section class="box-main">
@@ -60,7 +60,9 @@
 
   <div class="grid-3 grid-lg-1">
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
@@ -76,7 +78,9 @@
       </div>
     </article>
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
@@ -92,7 +96,9 @@
       </div>
     </article>
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>

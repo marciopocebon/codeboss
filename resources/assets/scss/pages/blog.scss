@@ -26,10 +26,11 @@
     transition: 0.2s;
 
     &:hover {
-      margin-top: 0px;
+      margin-top: 0;
     }
 
     .image-container {
+      display: block;
       height: 160px;
       width: 100%;
       background-position: center;

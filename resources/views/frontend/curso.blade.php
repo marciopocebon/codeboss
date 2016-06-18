@@ -1,9 +1,9 @@
-@extends('templates.master', ['title' => 'Curso'])
+@extends('frontend.templates.master', ['title' => 'Curso'])
 
 @section('content')
 <div class="box-cursos box-curso">
   <div class="container">
-    <img src="assets/images/angular.png" alt="">
+    <img src="{{ asset('assets/images/angular.png') }}" alt="">
     <h1>Angular: Iniciante</h1>
     <p>Entenda porquê o poderoso framework do Facebook já está no topo do mercado.</p>
     <div class="info">
@@ -14,42 +14,6 @@
     <a href="" class="btn btn-lg btn-alt btn-default m-t-20 m-l-5">Código <i class="fa fa-github"></i></a>
   </div>
 </div>
-
-<script type="text/javascript">
-  $(function() {
-    $('ul.list-aulas li').on('click', function(e) {
-      var target = $('.box-aula');
-      $(this).addClass('active').siblings('li').removeClass('active');
-      if (!target.hasClass('box-aula-open')) {
-        var _h = $(window).height();
-
-        $('.box-aula').height(_h);
-        $('.box-aula iframe').height(_h - 185);
-
-        $('aside').hide();
-      }
-
-      $('html, body').stop().animate({ scrollTop: (target.offset().top) }, 500, 'swing', function() {
-        $('.box-aula').addClass('box-aula-open');
-      });
-
-      e.preventDefault();
-    });
-
-    $('.box-aula .close').on('click', function() {
-      var target = $('.box-aula');
-      $('ul.list-aulas li').removeClass('active');
-      target.removeClass('box-aula-open').css({height: 0});
-      $('aside').show();
-    });
-
-    $('.btn-discussao').on('click', function(e) {
-      $('html, body').animate({ scrollTop: $('.box-discussao').offset().top - 20 }, 500);
-
-      e.preventDefault();
-    });
-  });
-</script>
 
 <div class="box-cursos box-aula">
   <div class="container-fluid">
@@ -150,29 +114,13 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  $(function() {
-    $('textarea').trumbowyg({
-      lang: 'pt',
-      resetCss: true,
-      autogrow: true,
-      btns: [
-        ['viewHTML'],
-        'btnGrp-semantic',
-        ['link'],
-        'btnGrp-lists',
-        ['preformatted']
-      ]
-    });
-  });
-</script>
 <div class="box-discussao container">
   <h2>Discussão</h2>
   <p>Converse e discuta com outros integrantes do curso</p>
   <div class="comments">
     <form action="">
       <div class="form-group">
-        <textarea name="" placeholder="Deixe um comentário sobre o curso"></textarea>
+        <textarea class="text-editor" name="" placeholder="Deixe um comentário sobre o curso"></textarea>
       </div>
     </form>
     <ul class="comment-list">
@@ -180,7 +128,7 @@
         <div class="comentario">
           <div class="row">
             <div class="img col-md-2 col-sm-3">
-              <img src="assets/images/avatar1.png" alt="">
+              <img src="{{ asset('assets/images/avatar1.png') }}" alt="">
             </div>
             <div class="col-md-10 col-sm-9">
               <div class="header">
@@ -204,7 +152,7 @@
             <div class="comentario">
               <div class="row">
                 <div class="img col-md-2 col-sm-3">
-                  <img src="assets/images/avatar2.png" alt="">
+                  <img src="{{ asset('assets/images/avatar2.png') }}" alt="">
                 </div>
                 <div class="col-md-10 col-sm-9">
                   <div class="header">
@@ -231,7 +179,7 @@
             <div class="comentario">
               <div class="row">
                 <div class="img col-md-2 col-sm-3">
-                  <img src="assets/images/avatar2.png" alt="">
+                  <img src="{{ asset('assets/images/avatar2.png') }}" alt="">
                   <p>
                     <span class="label label-default">Administrador</span>
                   </p>
@@ -259,7 +207,7 @@
         <div class="comentario">
           <div class="row">
             <div class="img col-md-2 col-sm-3">
-              <img src="assets/images/avatar3.png" alt="">
+              <img src="{{ asset('assets/images/avatar3.png') }}" alt="">
             </div>
             <div class="col-md-10 col-sm-9">
               <div class="header">

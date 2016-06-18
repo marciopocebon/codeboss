@@ -1,4 +1,4 @@
-@extends('templates.master', ['title' => 'Cadastro'])
+@extends('frontend.templates.master', ['title' => 'Cadastro'])
 
 @section('content')
 <div class="box-login">
@@ -63,7 +63,7 @@
             </div>
           </div>
 
-          <a href="pagamento" class="btn btn-primary btn-block btn-lg btn-alt">
+          <a href="{{ url('pagamento') }}" class="btn btn-primary btn-block btn-lg btn-alt">
             Prosseguir
             <i class="fa fa-caret-right"></i>
           </a>

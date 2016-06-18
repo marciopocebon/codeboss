@@ -1,4 +1,4 @@
-@extends('templates.master', ['title' => 'Cursos'])
+@extends('frontend.templates.master', ['title' => 'Cursos'])
 
 @section('content')
 <div class="box-header-title">
@@ -20,14 +20,12 @@
   </div>
 </div>
 
-<!--<div class="container grid-4 grid-lg-md-3 grid-md-sm-2 grid-sm-1">-->
-
 <div class="box-cursos-list container">
   <h2>Cursos de ReactJS</h2>
 
   <div class="grid-3 grid-md-sm-2 grid-sm-1">
-    <a href="curso" class="curso">
-      <img src="assets/images/react.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/react.png') }}" alt="">
       <h3>ReactJS: Iniciante</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">
@@ -36,8 +34,8 @@
       </div>
     </a>
 
-    <a href="curso" class="curso">
-      <img src="assets/images/angular.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/angular.png') }}" alt="">
       <h3>AngularJS: Iniciante</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">
@@ -46,8 +44,8 @@
       </div>
     </a>
 
-    <a href="curso" class="curso">
-      <img src="assets/images/angular.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/angular.png') }}" alt="">
       <h3>AngularJS: Intermediário</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">
@@ -62,8 +60,8 @@
   <h2>Cursos de AngularJS</h2>
 
   <div class="grid-3 grid-md-sm-2 grid-sm-1">
-    <a href="curso" class="curso">
-      <img src="assets/images/angular.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/angular.png') }}" alt="">
       <h3>ReactJS: Iniciante</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">
@@ -71,8 +69,8 @@
         <span>Básico</span>
       </div>
     </a>
-    <a href="curso" class="curso">
-      <img src="assets/images/react.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/react.png') }}" alt="">
       <h3>AngularJS: Iniciante</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">
@@ -80,8 +78,8 @@
         <span>Básico</span>
       </div>
     </a>
-    <a href="curso" class="curso">
-      <img src="assets/images/angular.png" alt="">
+    <a href="{{ url('curso') }}" class="curso">
+      <img src="{{ asset('assets/images/angular.png') }}" alt="">
       <h3>AngularJS: Intermediário</h3>
       <p>Estrutura de pastas, controllers, models, services e muito mais...</p>
       <div class="info hidden-xs">

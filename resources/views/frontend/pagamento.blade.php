@@ -1,4 +1,4 @@
-@extends('templates.master', ['title' => 'Pagamento'])
+@extends('frontend.templates.master', ['title' => 'Pagamento'])
 
 @section('content')
 <div class="box-login">
@@ -59,7 +59,7 @@
             </div>
             <div class="row m-t-10">
               <div class="col-md-12">
-                <img src="assets/images/cartao.png" alt="">
+                <img src="{{ asset('assets/images/cartao.png') }}" alt="">
               </div>
             </div>
           </div>

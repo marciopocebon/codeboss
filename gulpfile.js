@@ -57,9 +57,9 @@ gulp.task('scripts', function() {
  * Compile JADE templates and inject bower dependencies
  */
 gulp.task('templates', function() {
-  gulp.src(['./resources/views/layouts/master.blade.php'])
+  gulp.src(['./resources/views/templates/master.blade.php'])
     .pipe(wiredep())
-    .pipe(gulp.dest('./resources/views/layouts'))
+    .pipe(gulp.dest('./resources/views/templates'))
     .pipe(browserSync.stream({once: true}));
 });
 

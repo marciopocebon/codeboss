@@ -1,36 +1,6 @@
-@extends('templates.master', ['title' => 'Blog'])
+@extends('frontend.templates.master', ['title' => 'Blog'])
 
 @section('content')
-<script type="text/javascript">
-  $(function () {
-    // busca
-    $('#search').on('submit', function(event) {
-      event.preventDefault();
-      var form = $(event.target);
-
-      if (!form.hasClass('open')) {
-        form.addClass('open').find('#s').trigger('focus');
-        event.preventDefault();
-      } else {
-        var input = form.find('#s');
-
-        if (!input.val().length) {
-          input.addClass('error').focus();
-          event.preventDefault();
-        } else
-          input.removeClass('error');
-      }
-    });
-
-    // fecha busca
-    $('body').on('click', function(event) {
-      if (!$(event.target).closest('#search').length)
-        if ($('#search').hasClass('open'))
-          $('#search').removeClass('open').find('#s').removeClass('error');
-    });
-  });
-</script>
-
 <div class="box-header-title">
   <div class="container">
     <div class="has-search">
@@ -63,7 +33,9 @@
   <p class="subtitle">Todos os posts</p>
   <div class="grid-3 grid-lg-md-2 grid-md-1">
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url(assets/images/post-example.jpg)"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
@@ -80,7 +52,9 @@
       </div>
     </article>
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url(assets/images/post-example.jpg)"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
@@ -97,7 +71,9 @@
       </div>
     </article>
     <article class="blog-item">
-      <a href="#"><div class="image-container" style="background-image:url(assets/images/post-example.jpg)"></div></a>
+      <a href="#">
+          <span class="image-container" style="background-image:url({{ asset('assets/images/post-example.jpg') }})"></span>
+      </a>
       <div class="info">
         <header>
           <h1><a href="#">Why You Shouldn’t Be Scared of TypeScript</a></h1>
